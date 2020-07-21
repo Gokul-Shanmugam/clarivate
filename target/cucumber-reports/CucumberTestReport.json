@@ -4,104 +4,151 @@
     "elements": [
       {
         "line": 5,
-        "name": "Validate Square Root to be performed in Calculator",
-        "description": "",
-        "id": "bot-3594-automation-qa-engineer-interview-task;validate-square-root-to-be-performed-in-calculator",
+        "name": "Validate Google Search for Clarivate Analytics",
+        "description": "  This scenario is to validate the clarivate.com is the first search result while search with Clarivate Analytics in google.com",
+        "id": "bot-3594-automation-qa-engineer-interview-task;validate-google-search-for-clarivate-analytics",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 3366960900,
+              "duration": 9085813600,
               "status": "passed"
             },
-            "line": 7,
-            "name": "I launch Calculator Application",
+            "line": 8,
+            "name": "I launch \"https://www.google.com/\" in \"chrome\"",
             "match": {
-              "location": "WinniumSteps.launchCalculator()"
+              "arguments": [
+                {
+                  "val": "https://www.google.com/",
+                  "offset": 10
+                },
+                {
+                  "val": "chrome",
+                  "offset": 39
+                }
+              ],
+              "location": "SeleniumSteps.launchApplication(String,String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 9536003100,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "I enter number as \"16\" in calculator",
-            "match": {
-              "arguments": [
-                {
-                  "val": "16",
-                  "offset": 19
-                }
-              ],
-              "location": "WinniumSteps.enterValue(String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 534315700,
+              "duration": 82642500,
               "status": "passed"
             },
             "line": 9,
-            "name": "I click on \"SQUAREROOT\" in calculator",
+            "name": "I wait for \"GoogleSearch\" screen to load",
             "match": {
               "arguments": [
                 {
-                  "val": "SQUAREROOT",
+                  "val": "GoogleSearch",
                   "offset": 12
                 }
               ],
-              "location": "WinniumSteps.clickOperation(String)"
+              "location": "SeleniumSteps.waitForPageToLoad(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 546227100,
+              "duration": 33553400,
               "status": "passed"
             },
             "line": 10,
-            "name": "I click on \"EQUAL\" in calculator",
+            "name": "I verify \"txtSearchBox\" is displayed",
             "match": {
               "arguments": [
                 {
-                  "val": "EQUAL",
-                  "offset": 12
+                  "val": "txtSearchBox",
+                  "offset": 10
                 }
               ],
-              "location": "WinniumSteps.clickOperation(String)"
+              "location": "SeleniumSteps.verifyElementDisplayed(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: expected [4] but found [Display is 1]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:453)\r\n\tat org.testng.Assert.assertEquals(Assert.java:463)\r\n\tat core.WinniumSteps.verifyResult(WinniumSteps.java:71)\r\n\tat ✽.I validate the result as \"4\" in calculator(src/test/resources/feature/desktop/Calculator.feature:11)\r\n",
-              "duration": 81554200,
-              "status": "failed"
+              "duration": 128552700,
+              "status": "passed"
             },
             "line": 11,
-            "name": "I validate the result as \"4\" in calculator",
+            "name": "I enter the text as \"Clarivate Analytics\" in \"txtSearchBox\"",
             "match": {
               "arguments": [
                 {
-                  "val": "4",
-                  "offset": 26
+                  "val": "Clarivate Analytics",
+                  "offset": 21
+                },
+                {
+                  "val": "txtSearchBox",
+                  "offset": 46
                 }
               ],
-              "location": "WinniumSteps.verifyResult(String)"
+              "location": "SeleniumSteps.enterText(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3386102300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I hit Enter key",
+            "match": {
+              "location": "SeleniumSteps.pressEnterKey()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 35256800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I wait for \"SearchResults\" screen to load",
+            "match": {
+              "arguments": [
+                {
+                  "val": "SearchResults",
+                  "offset": 12
+                }
+              ],
+              "location": "SeleniumSteps.waitForPageToLoad(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 31597700,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I verify \"https://clarivate.com/\" search result link is displayed in index \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://clarivate.com/",
+                  "offset": 10
+                },
+                {
+                  "val": "1",
+                  "offset": 76
+                }
+              ],
+              "location": "SearchResults.verifySearchResult(String,String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@Scenario2"
+            "name": "@Scenario1"
           },
           {
-            "name": "@Desktop"
+            "name": "@Browser"
           },
           {
             "name": "@Automated"
@@ -113,14 +160,14 @@
     "description": "",
     "id": "bot-3594-automation-qa-engineer-interview-task",
     "keyword": "Feature",
-    "uri": "src/test/resources/feature/desktop/Calculator.feature",
+    "uri": "src/test/resources/feature/web/GoogleSearchResult.feature",
     "tags": [
       {
-        "name": "@Scenario2",
+        "name": "@Scenario1",
         "type": "Tag",
         "location": {
           "line": 1,
-          "column": 2
+          "column": 1
         }
       }
     ]

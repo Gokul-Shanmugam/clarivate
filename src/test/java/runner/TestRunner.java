@@ -11,7 +11,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		format = {"pretty","html:target/cucumber-reports/cucumber-pretty","json:target/cucumber-reports/CucumberTestReport.json","rerun:target/cucumber-reports/rerun.txt"},
 		features = "src/test/resources/feature",
 		glue={"core","pagefactory"},
-		tags={"@Desktop"},
+		tags={"@Browser"},
 		monochrome =true,
 		dryRun = false 
  )
@@ -21,7 +21,7 @@ public class TestRunner extends AbstractTestNGCucumberTests{
 	
 	 	@AfterClass(alwaysRun = true)
 	    public void closeDriver() throws Exception {
-			if(Context.getInstance().getBrowserType().equals("desktop")){
+			if(Context.getInstance().getBrowserType().toLowerCase().equals("desktop")){
 	 			Context.getInstance().getProcess().destroy();
 	 		}
 				Context.getInstance().closeDriver();

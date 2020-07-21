@@ -1,11 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 15.024 s <<< FAILURE! - in TestSuite
-runScenario(runner.TestRunner)  Time elapsed: 14.114 s  <<< FAILURE!
-java.lang.AssertionError: expected [4] but found [Display is 1]
-
-closeDriver(runner.TestRunner)  Time elapsed: 14.116 s  <<< FAILURE!
-java.lang.NullPointerException
-	at runner.TestRunner.closeDriver(TestRunner.java:27)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.218 s - in TestSuite

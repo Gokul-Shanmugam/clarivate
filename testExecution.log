@@ -1,5 +1,6 @@
-2020-07-21 11:49:57,959  INFO [main] Context:131 - Start of the test in desktop
-2020-07-21 11:50:01,174  INFO [main] Context:38 - Entering the input number as 16
-2020-07-21 11:50:10,709  INFO [main] Context:57 - click on operation in calculator
-2020-07-21 11:50:11,246  INFO [main] Context:57 - click on operation in calculator
-2020-07-21 11:50:11,793  INFO [main] Context:69 - verify the results in calculator
+2020-07-21 11:59:35,921  INFO [main] Context:129 - Start of the test in chrome
+2020-07-21 11:59:42,975  INFO [main] Context:32 - Launching the URL
+2020-07-21 11:59:44,947  INFO [main] Context:69 - GoogleSearch page loaded
+2020-07-21 11:59:44,981  INFO [main] Context:54 - Element is displayedtxtSearchBox
+2020-07-21 11:59:48,534  INFO [main] Context:69 - SearchResults page loaded
+2020-07-21 11:59:49,205  INFO [main] Context:191 - End of Execution

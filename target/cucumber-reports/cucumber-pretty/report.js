@@ -1,24 +1,24 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/feature/desktop/Calculator.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/feature/web/GoogleSearchResult.feature");
 formatter.feature({
   "name": "BOT 3594 Automation QA Engineer Interview Task",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@Scenario2"
+      "name": "@Scenario1"
     }
   ]
 });
 formatter.scenario({
-  "name": "Validate Square Root to be performed in Calculator",
-  "description": "",
+  "name": "Validate Google Search for Clarivate Analytics",
+  "description": "  This scenario is to validate the clarivate.com is the first search result while search with Clarivate Analytics in google.com",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@Scenario2"
+      "name": "@Scenario1"
     },
     {
-      "name": "@Desktop"
+      "name": "@Browser"
     },
     {
       "name": "@Automated"
@@ -26,54 +26,73 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "I launch Calculator Application",
+  "name": "I launch \"https://www.google.com/\" in \"chrome\"",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "WinniumSteps.launchCalculator()"
+  "location": "SeleniumSteps.launchApplication(String,String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I enter number as \"16\" in calculator",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "WinniumSteps.enterValue(String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I click on \"SQUAREROOT\" in calculator",
+  "name": "I wait for \"GoogleSearch\" screen to load",
   "keyword": "And "
 });
 formatter.match({
-  "location": "WinniumSteps.clickOperation(String)"
+  "location": "SeleniumSteps.waitForPageToLoad(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I click on \"EQUAL\" in calculator",
+  "name": "I verify \"txtSearchBox\" is displayed",
   "keyword": "And "
 });
 formatter.match({
-  "location": "WinniumSteps.clickOperation(String)"
+  "location": "SeleniumSteps.verifyElementDisplayed(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I validate the result as \"4\" in calculator",
+  "name": "I enter the text as \"Clarivate Analytics\" in \"txtSearchBox\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "SeleniumSteps.enterText(String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I hit Enter key",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "SeleniumSteps.pressEnterKey()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I wait for \"SearchResults\" screen to load",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "SeleniumSteps.waitForPageToLoad(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I verify \"https://clarivate.com/\" search result link is displayed in index \"1\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "WinniumSteps.verifyResult(String)"
+  "location": "SearchResults.verifySearchResult(String,String)"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: expected [4] but found [Display is 1]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:453)\r\n\tat org.testng.Assert.assertEquals(Assert.java:463)\r\n\tat core.WinniumSteps.verifyResult(WinniumSteps.java:71)\r\n\tat ✽.I validate the result as \"4\" in calculator(src/test/resources/feature/desktop/Calculator.feature:11)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 });
