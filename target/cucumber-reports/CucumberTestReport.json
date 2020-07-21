@@ -1,0 +1,128 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "Validate Square Root to be performed in Calculator",
+        "description": "",
+        "id": "bot-3594-automation-qa-engineer-interview-task;validate-square-root-to-be-performed-in-calculator",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3366960900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I launch Calculator Application",
+            "match": {
+              "location": "WinniumSteps.launchCalculator()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 9536003100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I enter number as \"16\" in calculator",
+            "match": {
+              "arguments": [
+                {
+                  "val": "16",
+                  "offset": 19
+                }
+              ],
+              "location": "WinniumSteps.enterValue(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 534315700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I click on \"SQUAREROOT\" in calculator",
+            "match": {
+              "arguments": [
+                {
+                  "val": "SQUAREROOT",
+                  "offset": 12
+                }
+              ],
+              "location": "WinniumSteps.clickOperation(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 546227100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I click on \"EQUAL\" in calculator",
+            "match": {
+              "arguments": [
+                {
+                  "val": "EQUAL",
+                  "offset": 12
+                }
+              ],
+              "location": "WinniumSteps.clickOperation(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected [4] but found [Display is 1]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:453)\r\n\tat org.testng.Assert.assertEquals(Assert.java:463)\r\n\tat core.WinniumSteps.verifyResult(WinniumSteps.java:71)\r\n\tat ✽.I validate the result as \"4\" in calculator(src/test/resources/feature/desktop/Calculator.feature:11)\r\n",
+              "duration": 81554200,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "I validate the result as \"4\" in calculator",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 26
+                }
+              ],
+              "location": "WinniumSteps.verifyResult(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Scenario2"
+          },
+          {
+            "name": "@Desktop"
+          },
+          {
+            "name": "@Automated"
+          }
+        ]
+      }
+    ],
+    "name": "BOT 3594 Automation QA Engineer Interview Task",
+    "description": "",
+    "id": "bot-3594-automation-qa-engineer-interview-task",
+    "keyword": "Feature",
+    "uri": "src/test/resources/feature/desktop/Calculator.feature",
+    "tags": [
+      {
+        "name": "@Scenario2",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 2
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="8484" started-at="2020-07-20T03:13:52Z" finished-at="2020-07-20T03:14:01Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@3ac3fd8b]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Test" duration-ms="8484" started-at="2020-07-20T03:13:52Z" finished-at="2020-07-20T03:14:01Z">
+      <class name="runner.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runner.TestRunner@3ac3fd8b]" name="setUpClass" is-config="true" duration-ms="342" started-at="2020-07-20T08:43:52Z" finished-at="2020-07-20T08:43:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@3ac3fd8b]" name="runScenario" duration-ms="8122" started-at="2020-07-20T08:43:53Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-07-20T08:44:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Automation task 2 - Validate Calculator to perform Square Root"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["BOT 3594 Automation QA Engineer Interview Task"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [4] but found [Display is 1]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [4] but found [Display is 1]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at core.WinniumSteps.verifyResult(WinniumSteps.java:40)
+	at ✽.I validate the result as "4" in calculator(file:///C:/Users/Gokul/workspace/clarivate/src/test/resources/feature/desktop/Calculator.feature:11)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:runner.TestRunner@3ac3fd8b]" name="closeDriver" is-config="true" duration-ms="1" started-at="2020-07-20T08:44:01Z" finished-at="2020-07-20T08:44:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runner.TestRunner@3ac3fd8b]" name="tearDownClass" is-config="true" duration-ms="2" started-at="2020-07-20T08:44:01Z" finished-at="2020-07-20T08:44:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.TestRunner -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

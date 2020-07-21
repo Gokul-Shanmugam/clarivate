@@ -1,0 +1,5 @@
+2020-07-21 11:49:57,959  INFO [main] Context:131 - Start of the test in desktop
+2020-07-21 11:50:01,174  INFO [main] Context:38 - Entering the input number as 16
+2020-07-21 11:50:10,709  INFO [main] Context:57 - click on operation in calculator
+2020-07-21 11:50:11,246  INFO [main] Context:57 - click on operation in calculator
+2020-07-21 11:50:11,793  INFO [main] Context:69 - verify the results in calculator
